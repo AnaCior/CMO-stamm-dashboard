@@ -69,7 +69,7 @@ translations = {
 
 #######################
 # Load data
-df_indicators = pd.read_excel(r"C:\Users\ciort\Jupyter Notebook files\cmo_stamm\merged_file.xlsx")
+df_indicators = pd.read_excel("merged_file.xlsx")
 
 #Choosing a language
 with st.sidebar:
