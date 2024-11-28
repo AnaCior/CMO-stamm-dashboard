@@ -71,7 +71,7 @@ st.markdown("""
 
 #######################
 # Load data
-df_indicators = pd.read_excel("merged_file.xlsx")
+df_indicators = pd.read_excel("small_merged.xlsx")
 
 #######################
 # Sidebar
