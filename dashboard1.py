@@ -71,7 +71,7 @@ st.markdown("""
 
 #######################
 # Load data
-df_indicators = pd.read_excel("merged_file.xlsx")
+df_indicators = pd.read_excel(r"C:\Users\ciort\Jupyter Notebook files\cmo_stamm\merged_file.xlsx")
 
 #######################
 # Sidebar
@@ -122,3 +122,6 @@ with col[0]:
     st.markdown(strings_i18n['BP def'])
                 
     st.markdown(strings_i18n["cmo"])
+
+    
+
