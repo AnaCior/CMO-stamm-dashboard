@@ -71,7 +71,7 @@ st.markdown("""
 
 #######################
 # Load data
-df_indicators = pd.read_excel(r"C:\Users\ciort\Jupyter Notebook files\cmo_stamm\small_merged.xlsx")
+df_indicators = pd.read_excel("small_merged.xlsx")
 
 #######################
 # Sidebar
