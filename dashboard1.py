@@ -39,7 +39,7 @@ st.markdown("""
 
 # Load data
 try:
-    names = pd.read_excel(r"C:\Users\ciort\Jupyter Notebook files\cmo_stamm\selected_column.xlsx")
+    names = pd.read_excel("selected_column.xlsx")
 except FileNotFoundError:
     st.error("Error: 'selected_column.xlsx' not found.")
     st.stop()
