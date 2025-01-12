@@ -12,11 +12,11 @@ file_options = {
             "2020": "F_017_Mean",
             "2021": "F_018_Mean",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_H_36.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_H_36.shp",
         "title": "Median disposable income",
     },
     "Satisfaction with life": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_H_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_H_01.shp",
         "year_columns": {
             "2013": "F_01K_Mean",
             "2014": "F_011_Mean",
@@ -32,7 +32,7 @@ file_options = {
         "title": "Satisfaction with life",
     },
     "Satisfaction with free time": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_PK_07.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_PK_07.shp",
         "year_columns": {
             "2013": "F_01K_Mean",
             "2014": "F_011_Mean",
@@ -58,11 +58,11 @@ file_options = {
             "2021": "F_09EV021",
             "2022": "F_09EV022",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_09_E_V_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_09_E_V_03.shp",
         "title": "Gross Domestic Product",
     },
     "Overweight": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_GZ_08.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_GZ_08.shp",
         "year_columns": {
             "2016": "F_01G_Mean",
             "2020": "F_011_Mean",
@@ -71,7 +71,7 @@ file_options = {
         "title": "Overweight",
     },
     "Experienced health": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_PK_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_PK_01.shp",
         "year_columns": {
             "2016": "F_01K_Mean",
             "2020": "F_011_Mean",
@@ -80,14 +80,14 @@ file_options = {
         "title": "Experienced health",
     },
     "Life expectancy of the population": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_GZ_20.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_GZ_20.shp",
         "year_columns": {
             "2021": "F_01G_Mean",
         },
         "title": "Life expectancy of the population",
     },
     "People with one or more long-term illnesses or conditions": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_GZ_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_GZ_03.shp",
         "year_columns": {
             "2016": "F_RGZ_Mean",
             "2020": "F_RG1_Mean",
@@ -96,7 +96,7 @@ file_options = {
         "title": "People with one or more long-term illnesses or conditions",
     },
     "Net labor participation": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_09_E_V_12.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_09_E_V_12.shp",
         "year_columns": {
             "2014": "mean14",
             "2015": "mean15",
@@ -112,7 +112,7 @@ file_options = {
         "title": "Net labor participation",
     },
     "Gross labor participation": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_AV_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_AV_01.shp",
         "year_columns": {
             "2014": "mean14",
             "2015": "mean15",
@@ -138,11 +138,11 @@ file_options = {
             "2021": "mean21",
             "2022": "mean22",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_09_E_V_13.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_09_E_V_13.shp",
         "title": "Unemployment",
     },
     "Distance to public transport": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_AV_02.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_AV_02.shp",
         "year_columns": {
             "2017": "spill17",
             "2018": "spill18",
@@ -154,7 +154,7 @@ file_options = {
         "title": "Distance to public transport",
     },
     "Satisfaction with living environment": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_03_PVI_04.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_03_PVI_04.shp",
         "year_columns": {
             "2015": "F_03P_Mean",
             "2018": "F_031_Mean",
@@ -168,11 +168,11 @@ file_options = {
             "2018": "F_011_Mean",
             "2021": "F_012_Mean",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_PK_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_PK_03.shp",
         "title": "Satisfaction with housing",
     },
     "Distance to sports field": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_SL_02.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_SL_02.shp",
         "year_columns": {
             "2015": "spill15",
             "2017": "spill17",
@@ -180,7 +180,7 @@ file_options = {
         "title": "Distance to sports field",
     },
     "Distance to primary school": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_SL_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_SL_03.shp",
         "year_columns": {
              "2013": "spill13",
              "2014": "spill14",
@@ -195,7 +195,7 @@ file_options = {
         "title": "Distance to primary school",
     },
     "Distance to café etc.": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_SL_04.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_SL_04.shp",
         "year_columns": {
             "2013": "spill13",
             "2014": "spill14",
@@ -211,7 +211,7 @@ file_options = {
         "title": "Distance to café etc.",
     },
     "Contact with family, friends or neighbors": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_08.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_08.shp",
         "year_columns": {
              "2013": "F_01K_Mean",
              "2014": "F_011_Mean",
@@ -227,7 +227,7 @@ file_options = {
         "title": "Contact with family, friends or neighbors",
     },
     "Trust in institutions": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_11.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_11.shp",
         "year_columns": {
             "2013": "mean13",
             "2014": "mean14",
@@ -243,7 +243,7 @@ file_options = {
         "title": "Trust in institutions",
     },
     "Trust in others": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_02_HB_SK_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_02_HB_SK_01.shp",
         "year_columns": {
             "2013": "mean13",
             "2014": "mean14",
@@ -271,11 +271,11 @@ file_options = {
              "2021": "F_01K_Me_1",
              "2022": "F_01K_Me_2",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_10.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_10.shp",
         "title": "Volunteer work",
     },
     "Emissions of particulate matter to air": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_30.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_30.shp",
         "year_columns": {
             "2015": "Mean_15",
             "2019": "mean19",
@@ -285,7 +285,7 @@ file_options = {
         "title": "Emissions of particulate matter to air",
     },
     "Number of crimes encountered": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_V_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_V_01.shp",
         "year_columns": {
             "2013": "F_RHN_Mean",
             "2014": "F_RH1_Mean",
@@ -310,11 +310,11 @@ file_options = {
             "2021": "F_046_Me_1",
             "2022": "F_047_Me_1",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_04_VE_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_04_VE_03.shp",
         "title": "Recorded crimes",
     },
     "Nature area per inhabitant": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_MIL_02.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_MIL_02.shp",
         "year_columns": {
             "2015": "Mean_15",
             "2017": "Mean_17",
@@ -322,7 +322,7 @@ file_options = {
         "title": "Nature area per inhabitant",
     },
     "Distance to public green areas": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_MIL_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_HN_MIL_01.shp",
         "year_columns": {
             "2015": "spill15",
             "2017": "spill17",
@@ -330,7 +330,7 @@ file_options = {
         "title": "Distance to public green areas",
     },
     "Nature and forest areas": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_14.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_14.shp",
         "year_columns": {
             "2015": "mean15",
             "2017": "mean17",
@@ -338,7 +338,7 @@ file_options = {
         "title": "Nature and forest areas",
     },
     "Greenhouse gas emissions per capita": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_07_K_E_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_07_K_E_03.shp",
         "year_columns": {
             "2015": "F_07KE015",
             "2016": "F_07KE016",
@@ -352,7 +352,7 @@ file_options = {
         #No spillover effect calculated yet, waiting on Hidde to read the literature
     },
     "Quality of bathing water coastal waters": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_02_HB_NK_30.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_02_HB_NK_30.shp",
         "year_columns": {
             "2013": "mean13",
             "2014": "mean14",
@@ -368,7 +368,7 @@ file_options = {
         "title": "Quality of bathing water coastal waters",
     },
     "Quality of inland bathing water": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_02_HB_NK_31.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_02_HB_NK_31.shp",
         "year_columns": {
             "2013": "mean13",
             "2014": "mean14_1",
@@ -396,11 +396,11 @@ file_options = {
              "2021": "F_188_Me_1",
              "2022": "F_189_Me_1",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_18_FIN_32.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_18_FIN_32.shp",
         "title": "Average debt per household",
     },
     "Median household wealth": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_07_NW.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_07_NW.shp",
         "year_columns": {
             "2013": "F_010_Mean",
             "2014": "F_011_Mean",
@@ -415,7 +415,7 @@ file_options = {
         "title": "Median household wealth",
     },
     "Private solar energy": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_L_NK_04.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_L_NK_04.shp",
         "year_columns": {
             "2013": "mean13",
             "2014": "mean14_1",
@@ -433,13 +433,13 @@ file_options = {
     "Built-up area": {
         "year_columns": {
             "2015": "F_RLN_Mean",
-        "2017": "F_RL1_Mean",
+            "2017": "F_RL1_Mean",
         },
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_L_NK_03.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_L_NK_03.shp",
         "title": "Built-up area",
     },
     "Green-blue space, excluding regular agriculture": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_15_15_NW.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_15_15_NW.shp",
         "year_columns": {
              "2013": "mean13",
              "2015": "mean15",
@@ -450,7 +450,7 @@ file_options = {
         "title": "Green-blue space, excluding regular agriculture",
     },
     "Highly educated population": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_05_OPL_08.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_05_OPL_08.shp",
         "year_columns": {
              "2013": "mean13",
              "2014": "mean14",
@@ -466,7 +466,7 @@ file_options = {
         "title": "Highly educated population",
     },
     "Social cohesion": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_L_SK_01.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_R_L_SK_01.shp",
         "year_columns": {
             "2013": "F_RLS_Me_1",
             "2014": "F_RLS_Me_2",
@@ -479,7 +479,7 @@ file_options = {
         "title": "Social cohesion",
     },
     "Often feeling unsafe in the neighbourhood": {
-        "path": r"https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_39.shp",
+        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_OK_39.shp",
         "year_columns": {
             "2013": "F_01K_Mean",
             "2014": "F_01K_Me_1",
