@@ -41,7 +41,8 @@ st.markdown("""
 
 # Load data
 try:
-    names = pd.read_excel("https://github.com/AnaCior/CMO-stamm-dashboard/blob/5e6d240a25dd8ad6069bf7e0c65f183a70fe6bcf/selected_column.xlsx")
+    url = "https://raw.githubusercontent.com/AnaCior/CMO-stamm-dashboard/5e6d240a25dd8ad6069bf7e0c65f183a70fe6bcf/selected_column.xlsx"
+    names = pd.read_excel(url)
 except FileNotFoundError:
     st.error("Error: 'selected_column.xlsx' not found.")
     st.stop()
