@@ -73,7 +73,10 @@ with col[0]:
     title_base = file_info["title"]
 
     # Load the selected file
-    indicator = gpd.read_file(indicator_path)
+    try:
+        indicator = gpd.read_file(indicator_path)
+    except Exception as e:
+        print(f"Error loading file: {e}")
 
     # Get the column corresponding to the selected year
     selected_column = year_columns[selected_year]
