@@ -52,7 +52,7 @@ statnaam_options = names['Gemeentenaam'].dropna().unique().tolist()
 # Sidebar
 with st.sidebar:
     st.title("Broad Prosperity Indicators")
-    selected_statnaam = st.selectbox("Select the first municipality:", statnaam_options)
+    #selected_statnaam = st.selectbox("Select the first municipality:", statnaam_options)
 
     #Need dynamic function which will zoom in on each municipality based on the choice !!
 
@@ -150,26 +150,6 @@ with col[0]:
     # Display the map with Streamlit
     st.pydeck_chart(r)
 
-    # Check if the selected column exists in the data
-    if selected_column in indicator.columns:
-        # **1. Static Plot using Matplotlib**
-        # Create a Matplotlib figure
-        fig = plt.figure(figsize=[12, 8])
-        ax = fig.add_axes([0, 0, 1, 1])
-        indicator.plot(
-            column=selected_column,
-            ax=ax,
-            legend=True,
-            legend_kwds={'orientation': 'vertical'}
-        )
-        plt.title(f"{title_base} van Nederland in {selected_year}")
-
-        # Display the figure in Streamlit
-        st.pyplot(fig)
-    else:
-        # If the column is not available, show a message
-        st.write(f"Data is unavailable for the year {selected_year}.")
-
 # Left Column: Intro
 with col[1]:
     st.markdown("""
@@ -203,6 +183,22 @@ with col[1]:
             margin-left: -5px;
         ">Click here</a>
     </div>
-""", unsafe_allow_html=True)
+    """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div style='text-align: left; padding: 10px; display: flex; align-items: center;'>
+        <h1 style='color: #e5007d; font-size: 20px; font-weight: bold; margin-top: 0; margin-right: 8px;'>For the download page:</h1>
+        <a href="https://streamlit.io/gallery" target="_blank" style="
+            text-decoration: none;
+            background-color: #e5007d;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-left: -5px;
+        ">Click here</a>
+    </div>
+    """, unsafe_allow_html=True)
 
 
