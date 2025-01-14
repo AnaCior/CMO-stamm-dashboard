@@ -74,7 +74,18 @@ with col[0]:
     title_base = file_info["title"]
 
     # Load the selected file
-    indicator = requests.get(indicator_path)
+    response = requests.get(indicator_path)
+    shp_path = f"{selected_indicator}.shp"
+
+    # Save the content to a local file
+    if response.status_code == 200:
+        with open(shp_path, "wb") as file:
+            file.write(response.content)
+    else:
+        st.error(f"Failed to download the shapefile, status code: {response.status_code}")
+    
+    # Load the shapefile with GeoPandas
+    indicator = gpd.read_file(shp_path)
 
     # Get the column corresponding to the selected year
     selected_column = year_columns[selected_year]
