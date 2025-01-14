@@ -6,6 +6,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 import folium
 import json
+import requests
 import pydeck as pdk 
 from test_en import file_options
 from engdict import Themes
