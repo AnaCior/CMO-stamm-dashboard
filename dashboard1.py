@@ -75,15 +75,16 @@ with col[0]:
 
     # Load the selected file
     response = requests.get(indicator_path)
+    
     ind_code = file_info["indicator"]
     shp_path = f"{ind_code}.shp"
-
-    # Save the content to a local file
     if response.status_code == 200:
         with open(shp_path, "wb") as file:
             file.write(response.content)
+        st.success(f"Shapefile saved to {shp_path}")
     else:
         st.error(f"Failed to download the shapefile, status code: {response.status_code}")
+
     
     # Load the shapefile with GeoPandas
     indicator = gpd.read_file(shp_path)
