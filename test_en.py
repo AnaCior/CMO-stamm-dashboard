@@ -12,7 +12,7 @@ file_options = {
             "2020": "F_017_Mean",
             "2021": "F_018_Mean",
         },
-        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/abd85dd323632956c4c30eeb53b3eb508753d173/Indicators/Indicator_01_KL_H_36.shp",
+        "path": "Indicators/Indicator_01_KL_H_36.shp",
         "title": "Median disposable income",
     },
     "Satisfaction with life": {
