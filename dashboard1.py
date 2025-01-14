@@ -75,7 +75,8 @@ with col[0]:
 
     # Load the selected file
     response = requests.get(indicator_path)
-    shp_path = f"{selected_indicator}.shp"
+    ind_code = file_info["indicator"]
+    shp_path = f"{ind_code}.shp"
 
     # Save the content to a local file
     if response.status_code == 200:
