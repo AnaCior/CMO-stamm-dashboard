@@ -73,16 +73,16 @@ with col[0]:
     indicator_path = file_info["path"]
     title_base = file_info["title"]
 
-    import os
-    print(f"Checking files in path: {os.path.dirname(shp_path)}")
-    for ext in ['.shp', '.shx', '.dbf']:
-        print(f"{shp_path.replace('.shp', ext)} exists: {os.path.exists(shp_path.replace('.shp', ext))}")
-
     # Load the selected file
     response = requests.get(indicator_path)
     
     ind_code = file_info["indicator"]
     shp_path = f"{ind_code}.shp"
+     import os
+    print(f"Checking files in path: {os.path.dirname(shp_path)}")
+    for ext in ['.shp', '.shx', '.dbf']:
+        print(f"{shp_path.replace('.shp', ext)} exists: {os.path.exists(shp_path.replace('.shp', ext))}")
+        
     if response.status_code == 200:
         with open(shp_path, "wb") as file:
             file.write(response.content)
