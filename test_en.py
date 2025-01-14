@@ -16,7 +16,7 @@ file_options = {
         "title": "Median disposable income",
     },
     "Satisfaction with life": {
-        "path": "https://github.com/AnaCior/CMO-stamm-dashboard/blob/cc3e910316abfab77db9374928cab18d037bc52f/Indicators/Indicator_01_KL_H_01.shp",
+        "path": "Indicators/Indicator_01_KL_H_01.shp",
         "year_columns": {
             "2013": "F_01K_Mean",
             "2014": "F_011_Mean",
