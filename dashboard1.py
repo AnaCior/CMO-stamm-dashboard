@@ -78,7 +78,7 @@ with col[0]:
     
     ind_code = file_info["indicator"]
     shp_path = f"{ind_code}.shp"
-     import os
+    import os
     print(f"Checking files in path: {os.path.dirname(shp_path)}")
     for ext in ['.shp', '.shx', '.dbf']:
         print(f"{shp_path.replace('.shp', ext)} exists: {os.path.exists(shp_path.replace('.shp', ext))}")
