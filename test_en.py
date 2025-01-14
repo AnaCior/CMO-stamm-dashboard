@@ -29,6 +29,7 @@ file_options = {
             "2021": "F_018_Mean",
             "2022": "F_01K_Me_1",
         },
+        "indicator": "Indicator_01_KL_H_01"
         "title": "Satisfaction with life",
     },
     "Satisfaction with free time": {
