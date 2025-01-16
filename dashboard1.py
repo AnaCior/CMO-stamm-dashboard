@@ -103,7 +103,7 @@ with col[0]:
     
     
     # Load the shapefile with GeoPandas
-    indicator = gpd.read_file(shp_url)
+    indicator = gpd.read_file(shp_file)
 
     # Get the column corresponding to the selected year
     selected_column = year_columns[selected_year]
