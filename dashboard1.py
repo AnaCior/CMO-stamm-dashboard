@@ -77,7 +77,7 @@ with col[0]:
     base_url= "https://github.com/AnaCior/CMO-stamm-dashboard/blob/bcf60294a1f5958dbb1096aa28dfa012fa9a6c94/Indicators/"
     shp_url = base_url + f"{ind_code}.shp"
     shx_url = base_url + f"{ind_code}.shx"
-    dbf_url = base_url  f"{ind_code}.dbf"
+    dbf_url = base_url + f"{ind_code}.dbf"
 
     # Function to download and extract shapefile components
     def download_shapefile(shp_url, shx_url, dbf_url):
