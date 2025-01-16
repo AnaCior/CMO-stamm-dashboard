@@ -72,12 +72,39 @@ col = st.columns((2,1), gap='medium')
 with col[0]:
     indicator_path = file_info["path"]
     title_base = file_info["title"]
+    ind_code = file_info["indicator"]
+    
+    base_url= "https://github.com/AnaCior/CMO-stamm-dashboard/blob/bcf60294a1f5958dbb1096aa28dfa012fa9a6c94/Indicators/"
+    shp_url = base_url + f"{ind_code}.shp"
+    shx_url = base_url + f"{ind_code}.shx"
+    dbf_url = base_url  f"{ind_code}.dbf"
 
+    # Function to download and extract shapefile components
+    def download_shapefile(shp_url, shx_url, dbf_url):
+        shp_response = requests.get(shp_url)
+        shx_response = requests.get(shx_url)
+        dbf_response = requests.get(dbf_url)
+        
+        # If the responses are successful (status code 200), write to temporary files
+        if shp_response.status_code == 200 and shx_response.status_code == 200 and dbf_response.status_code == 200:
+            with open("temp_shapefile.shp", "wb") as shp_file:
+                shp_file.write(shp_response.content)
+            with open("temp_shapefile.shx", "wb") as shx_file:
+                shx_file.write(shx_response.content)
+            with open("temp_shapefile.dbf", "wb") as dbf_file:
+                dbf_file.write(dbf_response.content)
+            return "Shapefile downloaded and saved locally."
+        else:
+            return "Error downloading shapefile components."
+    
+    # Download shapefile components
+    message = download_shapefile(shp_url, shx_url, dbf_url)
+    st.write(message)
+    
     # Load the selected file
     response = requests.get(indicator_path)
     
-    ind_code = file_info["indicator"]
-    shp_path = f"{ind_code}.shp"
+    
     import os
     print(f"Checking files in path: {os.path.dirname(shp_path)}")
     for ext in ['.shp', '.shx', '.dbf']:
