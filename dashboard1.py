@@ -11,6 +11,60 @@ import pydeck as pdk
 from test_en import file_options
 from engdict import Themes
 
+
+# URL of the folder in the GitHub repository (as a ZIP download link)
+repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/tree/0869eb52e110f81b22149b7d086811e219c0c5a7/Indicators"
+
+# Generate a unique directory name based on the repo URL
+def get_unique_folder_name(url):
+    hash_object = hashlib.md5(url.encode())
+    return hash_object.hexdigest()
+
+# Step 1: Check if folder exists, if not, download it
+def download_github_folder(repo_url):
+    unique_folder_name = get_unique_folder_name(repo_url)
+    temp_base_dir = tempfile.gettempdir()
+    folder_path = os.path.join(temp_base_dir, unique_folder_name)
+
+    if not os.path.exists(folder_path):  # Check if folder already exists
+        print("Folder not found. Downloading...")
+        response = requests.get(repo_url)
+        if response.status_code == 200:
+            zip_path = os.path.join(temp_base_dir, "github_folder.zip")
+            with open(zip_path, "wb") as zip_file:
+                zip_file.write(response.content)
+            
+            # Extract the ZIP file
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall(folder_path)
+            
+            # Clean up the ZIP file
+            os.remove(zip_path)
+            print(f"Folder downloaded and extracted to: {folder_path}")
+        else:
+            raise ValueError(f"Error downloading folder: {response.status_code}")
+    else:
+        print(f"Folder already exists at: {folder_path}")
+    
+    return folder_path
+
+# Step 2: Access and process files
+def process_files(folder_path):
+    print("Processing files...")
+    for root, dirs, files in os.walk(folder_path):
+        for file in files:
+            file_path = os.path.join(root, file)
+            print(f"Found file: {file_path}")
+            # Add your file processing logic here
+
+# Main script
+try:
+    folder_path = download_github_folder(repo_url)
+    process_files(folder_path)
+except ValueError as e:
+    print(str(e))
+
+
 # Page configuration
 st.set_page_config(
     page_title="Broad Prosperity: Netherlands",
