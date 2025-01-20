@@ -6,3 +6,8 @@ folium==0.19.4
 pydeck==0.9.1
 openpyxl
 requests
+os
+hashlib
+tempfile
+requests
+zipfile
