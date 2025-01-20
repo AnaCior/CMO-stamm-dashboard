@@ -132,72 +132,32 @@ with col[0]:
     shp_url = base_url + f"{ind_code}.shp"
     shx_url = base_url + f"{ind_code}.shx"
     dbf_url = base_url + f"{ind_code}.dbf"
-    cpg_url = base_url + f"{ind_code}.cpg"
-    prj_url = base_url + f"{ind_code}.prj"
-    sbn_url = base_url + f"{ind_code}.sbn"
-    sbx_url = base_url + f"{ind_code}.sbx"
-    shp_xml_url = base_url + f"{ind_code}.shp.xml"
     
     # Function to download and extract shapefile components
-    def download_shapefile(shp_url, shx_url, dbf_url, cpg_url, prj_url, sbn_url, sbx_url, shp_xml_url):
+    def download_shapefile(shp_url, shx_url, dbf_url):
         shp_response = requests.get(shp_url)
-        shx_response = requests.get(shx_url)
-        dbf_response = requests.get(dbf_url)
-        cpg_response = requests.get(cpg_url)
-        prj_response = requests.get(prj_url)
-        sbn_response = requests.get(sbn_url)
-        sbx_response = requests.get(sbx_url)
-        shp_xml_response = requests.get(shp_xml_url)
-        
+
         # If the responses are successful (status code 200), write to temporary files
-        if (shp_response.status_code == 200 and 
-            shx_response.status_code == 200 and 
-            dbf_response.status_code == 200 and 
-            cpg_response.status_code == 200 and 
-            prj_response.status_code == 200 and 
-            sbn_response.status_code == 200 and 
-            sbx_response.status_code == 200 and 
-            shp_xml_response.status_code == 200):
-            
+        if shp_response.status_code == 200 and shx_response.status_code == 200 and dbf_response.status_code == 200:
             shp_path = "temp_shapefile.shp"
             shx_path = "temp_shapefile.shx"
             dbf_path = "temp_shapefile.dbf"
-            cpg_path = "temp_shapefile.cpg"
-            prj_path = "temp_shapefile.prj"
-            sbn_path = "temp_shapefile.sbn"
-            sbx_path = "temp_shapefile.sbx"
-            shp_xml_path = "temp_shapefile.shp.xml"
-            
             with open(shp_path, "wb") as shp_file:
                 shp_file.write(shp_response.content)
             with open(shx_path, "wb") as shx_file:
                 shx_file.write(shx_response.content)
             with open(dbf_path, "wb") as dbf_file:
                 dbf_file.write(dbf_response.content)
-            with open(cpg_path, "wb") as cpg_file:
-                cpg_file.write(cpg_response.content)
-            with open(prj_path, "wb") as prj_file:
-                prj_file.write(prj_response.content)
-            with open(sbn_path, "wb") as sbn_file:
-                sbn_file.write(sbn_response.content)
-            with open(sbx_path, "wb") as sbx_file:
-                sbx_file.write(sbx_response.content)
-            with open(shp_xml_path, "wb") as shp_xml_file:
-                shp_xml_file.write(shp_xml_response.content)
-            
-            return shp_path, shx_path, dbf_path, cpg_path, prj_path, sbn_path, sbx_path, shp_xml_path
+            return shp_path, shx_path, dbf_path
         else:
             raise ValueError("Error downloading shapefile components.")
-    
+
     # Download shapefile components
     try:
-        shp_path, shx_path, dbf_path, cpg_path, prj_path, sbn_path, sbx_path, shp_xml_path = download_shapefile(
-            shp_url, shx_url, dbf_url, cpg_url, prj_url, sbn_url, sbx_url, shp_xml_url
-        )
-        st.write("Shapefile and all components downloaded and saved locally.")
+        shp_path, shx_path, dbf_path = download_shapefile(shp_url, shx_url, dbf_url)
+        st.write("Shapefile downloaded and saved locally.")
     except ValueError as e:
         st.write(str(e))
-    
     # Load the shapefile with GeoPandas
     indicator = gpd.read_file(shp_path)
     
