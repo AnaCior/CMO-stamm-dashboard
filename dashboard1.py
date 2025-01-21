@@ -10,7 +10,6 @@ import requests
 import pydeck as pdk 
 from test_en import file_options
 from engdict import Themes
-
 import os
 import logging
 import requests
@@ -19,10 +18,12 @@ import tempfile
 import zipfile
 
 # Define the target path for the log file (a local directory)
+import os
 log_dir = os.path.join(os.getcwd(), "logs")  # Use a folder named 'logs' in the current directory
 
 # Ensure the directory exists
 if not os.path.exists(log_dir):
+    print(f"Creating logs directory at: {log_dir}")
     os.makedirs(log_dir)  # Create the directory if it doesn't exist
 
 # Full path for the log file
@@ -152,40 +153,8 @@ col = st.columns((2,1), gap='medium')
 with col[0]:
     indicator_path = file_info["path"]
     title_base = file_info["title"]
-    ind_code = file_info["indicator"]
     
-    base_url = "https://github.com/AnaCior/CMO-stamm-dashboard/blob/bcf60294a1f5958dbb1096aa28dfa012fa9a6c94/Indicators/"
-    shp_url = base_url + f"{ind_code}.shp"
-    shx_url = base_url + f"{ind_code}.shx"
-    dbf_url = base_url + f"{ind_code}.dbf"
-    
-    # Function to download and extract shapefile components
-    def download_shapefile(shp_url, shx_url, dbf_url):
-        shp_response = requests.get(shp_url)
-
-        # If the responses are successful (status code 200), write to temporary files
-        if shp_response.status_code == 200 and shx_response.status_code == 200 and dbf_response.status_code == 200:
-            shp_path = "temp_shapefile.shp"
-            shx_path = "temp_shapefile.shx"
-            dbf_path = "temp_shapefile.dbf"
-            with open(shp_path, "wb") as shp_file:
-                shp_file.write(shp_response.content)
-            with open(shx_path, "wb") as shx_file:
-                shx_file.write(shx_response.content)
-            with open(dbf_path, "wb") as dbf_file:
-                dbf_file.write(dbf_response.content)
-            return shp_path, shx_path, dbf_path
-        else:
-            raise ValueError("Error downloading shapefile components.")
-
-    # Download shapefile components
-    try:
-        shp_path, shx_path, dbf_path = download_shapefile(shp_url, shx_url, dbf_url)
-        st.write("Shapefile downloaded and saved locally.")
-    except ValueError as e:
-        st.write(str(e))
-    # Load the shapefile with GeoPandas
-    indicator = gpd.read_file(shp_path)
+    indicator = gpd.read_file(indicator_path)
     
     # Get the column corresponding to the selected year
     selected_column = year_columns[selected_year]
