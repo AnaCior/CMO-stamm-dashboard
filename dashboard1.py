@@ -22,10 +22,11 @@ log_dir = os.path.join(os.getcwd(), "logs")  # Use a folder named 'logs' in the 
 
 # Ensure the directory exists
 if not os.path.exists(log_dir):
-    print(f"Creating logs directory at: {log_dir}")
     os.makedirs(log_dir)  # Create the directory if it doesn't exist
 
 # Full path for the log file
+log_file_path = os.path.join(log_dir, "app.log")
+
 class InotifyEventFilter(logging.Filter):
     def filter(self, record):
         return 'IN_MODIFY' not in record.getMessage()
@@ -34,12 +35,15 @@ class InotifyEventFilter(logging.Filter):
 file_handler = logging.FileHandler(log_file_path)
 file_handler.addFilter(InotifyEventFilter())
 
+stream_handler = logging.StreamHandler()
+stream_handler.addFilter(InotifyEventFilter())
+
 logging.basicConfig(
     level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         file_handler,
-        logging.StreamHandler()  # This will print logs to console as well
+        stream_handler  # This will print logs to console as well
     ]
 )
 
