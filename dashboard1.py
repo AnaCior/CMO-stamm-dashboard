@@ -12,7 +12,7 @@ from test_en import file_options
 from engdict import Themes
 
 # Define the target path for the log file
-log_dir = r"C:\Users\ciort\Jupyter Notebook files\cmo_stamm"
+log_dir = "https://github.com/AnaCior/CMO-stamm-dashboard/tree/main"
 
 # Ensure the directory exists
 if not os.path.exists(log_dir):
