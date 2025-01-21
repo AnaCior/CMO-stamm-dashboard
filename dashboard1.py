@@ -44,7 +44,9 @@ logging.basicConfig(
     ]
 )
 
-# Add the filter to the root logger
+# Add the filter to both file and stream handlers
+file_handler.addFilter(InotifyEventFilter())
+stream_handler.addFilter(InotifyEventFilter())
 logging.getLogger().addFilter(InotifyEventFilter())
 # URL of the GitHub repository ZIP download
 repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
