@@ -26,19 +26,22 @@ if not os.path.exists(log_dir):
     os.makedirs(log_dir)  # Create the directory if it doesn't exist
 
 # Full path for the log file
-log_file_path = os.path.join(log_dir, "app.log")
+class InotifyEventFilter(logging.Filter):
+    def filter(self, record):
+        return 'IN_MODIFY' not in record.getMessage()
 
 # Configure logging to save to the specified directory and capture DEBUG level messages
 logging.basicConfig(
     level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file_path),  # Log to file
-        logging.StreamHandler()  # Also print logs to console
+        logging.FileHandler(log_file_path),
+        logging.StreamHandler()  # This will print logs to console as well
     ]
 )
 
-logging.getLogger("watchdog.observers.inotify").setLevel(logging.WARNING)
+# Add the filter to the root logger
+logging.getLogger().addFilter(InotifyEventFilter())
 
 # URL of the GitHub repository ZIP download
 repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
