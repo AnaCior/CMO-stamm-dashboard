@@ -31,17 +31,17 @@ class InotifyEventFilter(logging.Filter):
         return 'IN_MODIFY' not in record.getMessage()
 
 # Configure logging to save to the specified directory and capture DEBUG level messages
+file_handler = logging.FileHandler(log_file_path)
+file_handler.addFilter(InotifyEventFilter())
+
 logging.basicConfig(
     level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file_path),
+        file_handler,
         logging.StreamHandler()  # This will print logs to console as well
     ]
 )
-
-# Add the filter to the root logger
-logging.getLogger().addFilter(InotifyEventFilter())
 
 # URL of the GitHub repository ZIP download
 repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
