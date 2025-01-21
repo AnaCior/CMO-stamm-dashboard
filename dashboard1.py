@@ -11,8 +11,15 @@ import pydeck as pdk
 from test_en import file_options
 from engdict import Themes
 
-# Define the target path for the log file
-log_dir = "https://github.com/AnaCior/CMO-stamm-dashboard/tree/main"
+import os
+import logging
+import requests
+import hashlib
+import tempfile
+import zipfile
+
+# Define the target path for the log file (a local directory)
+log_dir = os.path.join(os.getcwd(), "logs")  # Use a folder named 'logs' in the current directory
 
 # Ensure the directory exists
 if not os.path.exists(log_dir):
@@ -26,8 +33,8 @@ logging.basicConfig(
     level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler(log_file_path),
-        logging.StreamHandler()  # This will print logs to console as well
+        logging.FileHandler(log_file_path),  # Log to file
+        logging.StreamHandler()  # Also print logs to console
     ]
 )
 
