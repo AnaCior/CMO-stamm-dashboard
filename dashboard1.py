@@ -31,6 +31,10 @@ if not os.path.exists(log_dir):
 # Full path for the log file
 log_file_path = os.path.join(log_dir, "app.log")
 
+# Verify the log file path
+if not os.access(log_dir, os.W_OK):
+    raise PermissionError(f"Cannot write to directory: {log_dir}")
+
 # Configure logging to save to the specified directory and capture DEBUG level messages
 file_handler = logging.FileHandler(log_file_path)
 stream_handler = logging.StreamHandler()
