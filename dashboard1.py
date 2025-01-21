@@ -17,10 +17,6 @@ import hashlib
 import tempfile
 import zipfile
 
-class InotifyEventFilter(logging.Filter):
-    def filter(self, record):
-        return 'IN_MODIFY' not in record.getMessage()
-
 # Define the target path for the log file (a local directory)
 log_dir = os.path.join(os.getcwd(), "logs")  # Use a folder named 'logs' in the current directory
 
@@ -31,27 +27,22 @@ if not os.path.exists(log_dir):
 # Full path for the log file
 log_file_path = os.path.join(log_dir, "app.log")
 
-# Verify the log file path
-if not os.access(log_dir, os.W_OK):
-    raise PermissionError(f"Cannot write to directory: {log_dir}")
-
 # Configure logging to save to the specified directory and capture DEBUG level messages
-file_handler = logging.FileHandler(log_file_path)
-stream_handler = logging.StreamHandler()
-
 logging.basicConfig(
     level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
     format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
-        file_handler,
-        stream_handler  # This will print logs to console as well
+        logging.FileHandler(log_file_path),
+        logging.StreamHandler()  # This will print logs to console as well
     ]
 )
 
-# Add the filter to both file and stream handlers
-file_handler.addFilter(InotifyEventFilter())
-stream_handler.addFilter(InotifyEventFilter())
-logging.getLogger().addFilter(InotifyEventFilter())
+# Verify the log file path and permissions
+try:
+    with open(log_file_path, 'a') as f:
+        pass
+except IOError as e:
+    raise PermissionError(f"Cannot write to log file: {log_file_path}, due to: {e}")
 # URL of the GitHub repository ZIP download
 repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
 
