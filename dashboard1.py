@@ -17,6 +17,10 @@ import hashlib
 import tempfile
 import zipfile
 
+class InotifyEventFilter(logging.Filter):
+    def filter(self, record):
+        return 'IN_MODIFY' not in record.getMessage()
+
 # Define the target path for the log file (a local directory)
 log_dir = os.path.join(os.getcwd(), "logs")  # Use a folder named 'logs' in the current directory
 
@@ -27,16 +31,9 @@ if not os.path.exists(log_dir):
 # Full path for the log file
 log_file_path = os.path.join(log_dir, "app.log")
 
-class InotifyEventFilter(logging.Filter):
-    def filter(self, record):
-        return 'IN_MODIFY' not in record.getMessage()
-
 # Configure logging to save to the specified directory and capture DEBUG level messages
 file_handler = logging.FileHandler(log_file_path)
-file_handler.addFilter(InotifyEventFilter())
-
 stream_handler = logging.StreamHandler()
-stream_handler.addFilter(InotifyEventFilter())
 
 logging.basicConfig(
     level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
@@ -47,6 +44,8 @@ logging.basicConfig(
     ]
 )
 
+# Add the filter to the root logger
+logging.getLogger().addFilter(InotifyEventFilter())
 # URL of the GitHub repository ZIP download
 repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
 
