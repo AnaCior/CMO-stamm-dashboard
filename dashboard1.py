@@ -11,9 +11,28 @@ import pydeck as pdk
 from test_en import file_options
 from engdict import Themes
 
+# Define the target path for the log file
+log_dir = r"C:\Users\ciort\Jupyter Notebook files\cmo_stamm"
 
-# URL of the folder in the GitHub repository (as a ZIP download link)
-repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/tree/0869eb52e110f81b22149b7d086811e219c0c5a7/Indicators"
+# Ensure the directory exists
+if not os.path.exists(log_dir):
+    os.makedirs(log_dir)  # Create the directory if it doesn't exist
+
+# Full path for the log file
+log_file_path = os.path.join(log_dir, "app.log")
+
+# Configure logging to save to the specified directory and capture DEBUG level messages
+logging.basicConfig(
+    level=logging.DEBUG,  # Set to DEBUG to capture detailed logs
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler(log_file_path),
+        logging.StreamHandler()  # This will print logs to console as well
+    ]
+)
+
+# URL of the GitHub repository ZIP download
+repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
 
 # Generate a unique directory name based on the repo URL
 def get_unique_folder_name(url):
@@ -27,7 +46,7 @@ def download_github_folder(repo_url):
     folder_path = os.path.join(temp_base_dir, unique_folder_name)
 
     if not os.path.exists(folder_path):  # Check if folder already exists
-        print("Folder not found. Downloading...")
+        logging.info("Folder not found. Downloading...")
         response = requests.get(repo_url)
         if response.status_code == 200:
             zip_path = os.path.join(temp_base_dir, "github_folder.zip")
@@ -40,21 +59,22 @@ def download_github_folder(repo_url):
             
             # Clean up the ZIP file
             os.remove(zip_path)
-            print(f"Folder downloaded and extracted to: {folder_path}")
+            logging.info(f"Folder downloaded and extracted to: {folder_path}")
         else:
+            logging.error(f"Error downloading folder: {response.status_code}")
             raise ValueError(f"Error downloading folder: {response.status_code}")
     else:
-        print(f"Folder already exists at: {folder_path}")
+        logging.info(f"Folder already exists at: {folder_path}")
     
     return folder_path
 
 # Step 2: Access and process files
 def process_files(folder_path):
-    print("Processing files...")
+    logging.info("Processing files...")
     for root, dirs, files in os.walk(folder_path):
         for file in files:
             file_path = os.path.join(root, file)
-            print(f"Found file: {file_path}")
+            logging.info(f"Found file: {file_path}")
             # Add your file processing logic here
 
 # Main script
@@ -62,8 +82,7 @@ try:
     folder_path = download_github_folder(repo_url)
     process_files(folder_path)
 except ValueError as e:
-    print(str(e))
-
+    logging.error(str(e))
 
 # Page configuration
 st.set_page_config(
