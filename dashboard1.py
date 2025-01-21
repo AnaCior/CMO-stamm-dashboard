@@ -18,7 +18,6 @@ import tempfile
 import zipfile
 
 # Define the target path for the log file (a local directory)
-import os
 log_dir = os.path.join(os.getcwd(), "logs")  # Use a folder named 'logs' in the current directory
 
 # Ensure the directory exists
@@ -38,6 +37,8 @@ logging.basicConfig(
         logging.StreamHandler()  # Also print logs to console
     ]
 )
+
+logging.getLogger("watchdog.observers.inotify").setLevel(logging.WARNING)
 
 # URL of the GitHub repository ZIP download
 repo_url = "https://github.com/AnaCior/CMO-stamm-dashboard/archive/refs/heads/main.zip"
